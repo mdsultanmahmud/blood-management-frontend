@@ -12,7 +12,7 @@ The site has **no theme system**: colors, spacing and type are hard-coded Tailwi
 | Neutrals | slate scale for borders, muted text and the footer |
 | Cards | `rounded-2xl` and `rounded-3xl`, thin slate borders, soft shadows |
 | Header | Sticky, 80 px tall, translucent white with backdrop blur and a bottom border |
-| Fonts | Geist (UI) and Geist Mono, loaded in `app/layout.tsx`; the tagline and Bangla strings rely on the system Bangla font |
+| Fonts | Inter for everything, loaded with `next/font/google` in `app/layout.tsx` (Latin subset); Inter has no Bangla glyphs, so the tagline and Bangla strings still fall back to the system Bangla font |
 | Icons | `lucide-react` |
 | Page title | "RoktoLife BD \| Emergency Blood Donor Network in Bangladesh" |
 

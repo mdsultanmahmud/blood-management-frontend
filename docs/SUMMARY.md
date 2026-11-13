@@ -10,7 +10,7 @@ Next 16.4.6 App Router with `cacheComponents: true` and `partialPrefetching: tru
 
 | Path | Purpose |
 | --- | --- |
-| `app/layout.tsx` | Metadata (title "RoktoLife BD \| Emergency Blood Donor Network in Bangladesh", description, keywords, openGraph); Geist and Geist Mono fonts; `html lang="en"` |
+| `app/layout.tsx` | Metadata (title "RoktoLife BD \| Emergency Blood Donor Network in Bangladesh", description, keywords, openGraph); Inter font through `next/font/google` (CSS variable `--font-inter`); `html lang="en"` |
 | `app/page.tsx` | Server component: Suspense (blank slate-50 fallback), awaits `getLandingData()`, renders `<Landing/>` |
 | `components/Landing.tsx` | 1713 lines, a single `"use client"` component: all sections, modals and forms |
 | `lib/data.ts` | Server data fetch with `"use cache"` |
@@ -56,7 +56,7 @@ Not used: `GET /site`.
 
 - **Landing sections, in order:** sticky header (logo; nav `#urgent-requests`, `#donors-section`, `#compatibility`, `#network`; EN and Bangla toggle; "Emergency: 10615" tel link; mobile menu); hero (search form by blood group and district, buttons "Request Blood Urgently" and "Register as Donor", four stats: Registered Donors, Lives Saved = fulfilledRequests, Districts Covered shown as n / 64, Active Requests); `#urgent-requests` (live verified requests; filters All, Critical Only, Dhaka, Rajshahi, Chittagong; a "Respond / Contact" button opens a modal with a `tel:` link; empty state "No open requests right now"); `#compatibility` (interactive give and receive chart); `#donors-section` (donor cards with `tel:` links, search results, searching, error and reset states); How It Works (3 steps); `#network` (blood banks, rendered only if there are banks); footer (quick links, "National Emergency: Call 999").
 - **Fixed district list** in filters and forms: Dhaka, Chittagong, Rajshahi, Sylhet, Khulna, Barisal, Rangpur, Mymensingh.
-- **Look:** hard-coded Tailwind: rose-600 brand, slate neutrals, rounded-2xl and 3xl cards, backdrop-blur sticky header, Droplet logo. Fonts Geist and Geist Mono. Tokens are not theme-driven.
+- **Look:** hard-coded Tailwind: rose-600 brand, slate neutrals, rounded-2xl and 3xl cards, backdrop-blur sticky header, Droplet logo. Font Inter for everything (`--font-sans` and `--font-mono` both point to `--font-inter`). Tokens are not theme-driven.
 - **Languages:** English and Bangla via an in-component dictionary and a client-only toggle (not persisted, no locale in the URL). Footer, "Interactive Tool" and compatibility labels are English only.
 - **Responsive:** mobile menu below the md and lg breakpoints; grids collapse on small screens.
 - **Forms** (modals in `Landing.tsx`, plain client state, no form library):
