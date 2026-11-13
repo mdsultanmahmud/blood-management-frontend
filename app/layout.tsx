@@ -16,7 +16,13 @@ export const metadata: Metadata = {
   title: "RoktoLife BD | Emergency Blood Donor Network in Bangladesh",
   description:
     "Find verified voluntary blood donors across all 64 districts of Bangladesh in real time. Request blood urgently, check blood group compatibility and register as a donor.",
-  keywords: ["blood donor Bangladesh", "emergency blood", "blood bank", "RoktoLife", "রক্তদান"],
+  keywords: [
+    "blood donor Bangladesh",
+    "emergency blood",
+    "blood bank",
+    "RoktoLife",
+    "রক্তদান",
+  ],
   openGraph: {
     title: "RoktoLife BD | Emergency Blood Donor Network",
     description: "Every drop counts. Save a life today in Bangladesh.",
