@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// The one font of the site, used for everything (including what was monospace).
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -16,7 +12,13 @@ export const metadata: Metadata = {
   title: "RoktoLife BD | Emergency Blood Donor Network in Bangladesh",
   description:
     "Find verified voluntary blood donors across all 64 districts of Bangladesh in real time. Request blood urgently, check blood group compatibility and register as a donor.",
-  keywords: ["blood donor Bangladesh", "emergency blood", "blood bank", "RoktoLife", "রক্তদান"],
+  keywords: [
+    "blood donor Bangladesh",
+    "emergency blood",
+    "blood bank",
+    "RoktoLife",
+    "রক্তদান",
+  ],
   openGraph: {
     title: "RoktoLife BD | Emergency Blood Donor Network",
     description: "Every drop counts. Save a life today in Bangladesh.",
@@ -29,7 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
